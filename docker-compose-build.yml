@@ -17,7 +17,8 @@ services:
       - SSL_CERT_FILE=/etc/nginx/certs/localhost.crt
       - SSL_KEY_FILE=/etc/nginx/certs/localhost.key
   php:
-    image: carletonuniversity/cu-wordpress-php
+    build:
+      context: ./wordpress
     container_name: wordpress_php
     restart: always
     volumes:
